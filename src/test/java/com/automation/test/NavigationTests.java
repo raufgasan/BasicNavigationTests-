@@ -20,7 +20,7 @@ public class NavigationTests {
 
     }
 
-    static void Chrom(){
+    static void Chrom() {
         WebDriver driverChrom = BrowserFactory.getDriver("chrome");
         driverChrom.get("https://google.com");
         driverChrom.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -33,8 +33,9 @@ public class NavigationTests {
         StringUtility.verifyEquals(titleEtsy, driverChrom.getTitle());
         driverChrom.quit();
     }
-    static void FireFox(){
-        WebDriver driverFireFox= BrowserFactory.getDriver("firefox");
+
+    static void FireFox() {
+        WebDriver driverFireFox = BrowserFactory.getDriver("firefox");
         driverFireFox.get("https://google.com");
         driverFireFox.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         String titleGoogle = driverFireFox.getTitle();
@@ -47,7 +48,7 @@ public class NavigationTests {
         driverFireFox.quit();
     }
 
-    static void EdgeBrowser(){
+    static void EdgeBrowser() {
         WebDriver driverEdge = BrowserFactory.getDriver("edge");
         driverEdge.get("https://google.com");
         driverEdge.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

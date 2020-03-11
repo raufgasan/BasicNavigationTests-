@@ -11,24 +11,24 @@ public class BrowserFactory {
 
     public static WebDriver getDriver(String browserName) {
 
-        if(System.getProperty("os.name").toLowerCase().contains("windows")&&browserName.equalsIgnoreCase("safari")) {
+        if (System.getProperty("os.name").toLowerCase().contains("windows") && browserName.equalsIgnoreCase("safari")) {
             return null;
 
-        }else if(System.getProperty("os.name").contains("mac")&&browserName.equalsIgnoreCase("edge")){
-                return null;
+        } else if (System.getProperty("os.name").contains("mac") && browserName.equalsIgnoreCase("edge")) {
+            return null;
 
         } else if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
-        }else if (browserName.equalsIgnoreCase("firefox")){
+        } else if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
-        }else if (browserName.equalsIgnoreCase("edge")) {
+        } else if (browserName.equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
             return new EdgeDriver();
-        }else if (browserName.equalsIgnoreCase("safari")) {
-                 return new SafariDriver();
-        }else {
+        } else if (browserName.equalsIgnoreCase("safari")) {
+            return new SafariDriver();
+        } else {
             return null;
         }
     }
